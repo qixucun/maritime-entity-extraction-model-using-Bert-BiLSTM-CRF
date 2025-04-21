@@ -1,0 +1,56 @@
+{
+  "bert_dir": "./model_hub/chinese-bert-wwm-ext/",
+  "output_dir": "./checkpoint/dgre",
+  "data_dir": "./data/",
+  "data_path": "./data/dgre/ner_data",
+  "labels": [
+    "船名",
+    "地名",
+    "机构",
+    "船舶行为"
+  ],
+  "bio_labels": [
+   "O",
+    "B-船名",
+    "I-船名",
+    "B-地名",
+    "I-地名",
+    "B-机构",
+    "I-机构",
+    "B-船舶行为",
+    "I-船舶行为"
+  ],
+  "num_labels": 9,
+  "label2id": {
+     "O": 0,
+    "B-船名": 1,
+    "I-船名": 2,
+    "B-地名": 3,
+    "I-地名": 4,
+    "B-机构": 5,
+    "I-机构": 6,
+    "B-船舶行为": 7,
+    "I-船舶行为": 8
+  },
+  "id2label": {
+    "0": "O",
+    "1": "B-船名",
+    "2": "I-船名",
+    "3": "B-地名",
+    "4": "I-地名",
+    "5": "B-机构",
+    "6": "I-机构",
+    "7": "B-船舶行为",
+    "8": "I-船舶行为"
+  },
+  "max_seq_len": 512,
+  "epochs": 3,
+  "train_batch_size": 12,
+  "dev_batch_size": 12,
+  "bert_learning_rate": 3e-05,
+  "crf_learning_rate": 0.003,
+  "adam_epsilon": 1e-08,
+  "weight_decay": 0.01,
+  "warmup_proportion": 0.01,
+  "save_step": 500
+}
